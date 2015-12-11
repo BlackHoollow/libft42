@@ -6,7 +6,7 @@
 /*   By: nromptea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 17:40:58 by nromptea          #+#    #+#             */
-/*   Updated: 2015/12/04 17:37:33 by nromptea         ###   ########.fr       */
+/*   Updated: 2015/12/11 16:50:03 by nromptea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ char	*ft_strtrim(char const *s)
 		len2--;
 	while ((s[len2] == ' ' || s[len2] == '\n' || s[len2] == '\t'))
 		len2--;
-	if (!(res = (char *)malloc(sizeof(char) * (len2 - len1 + 1))))
+	if (!(res = (char *)malloc(sizeof(char) * (len2 - len1 + 2))))
 		return (NULL);
 	len3 = 0;
 	while (len1 <= len2)

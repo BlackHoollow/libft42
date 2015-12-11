@@ -6,7 +6,7 @@
 #    By: nromptea <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/08/25 13:59:57 by mbinet            #+#    #+#              #
-#    Updated: 2015/12/04 18:07:34 by nromptea         ###   ########.fr        #
+#    Updated: 2015/12/11 16:22:18 by nromptea         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -97,3 +97,5 @@ fclean: clean
 	/bin/rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: all clean fclean re

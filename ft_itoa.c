@@ -6,7 +6,7 @@
 /*   By: nromptea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 19:33:20 by nromptea          #+#    #+#             */
-/*   Updated: 2015/12/04 21:05:55 by nromptea         ###   ########.fr       */
+/*   Updated: 2015/12/11 17:13:10 by nromptea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,21 @@ static char	*itoa_rec(long long n, char *res)
 	return (res + 1);
 }
 
+static int	check_nbch(int nb, int nbch)
+{
+	if (nb < 0)
+	{
+		nb = -nb;
+		nbch++;
+	}
+	while (nb >= 10)
+	{
+		nb = nb / 10;
+		nbch++;
+	}
+	return (nbch);
+}
+
 char		*ft_itoa(int n)
 {
 	char		*res;
@@ -33,12 +48,8 @@ char		*ft_itoa(int n)
 	nbch = 1;
 	i = 0;
 	tmp = n;
-	while (nb >= 10)
-	{
-		nb = nb / 10;
-		nbch++;
-	}
-	if (!(res = (char *)malloc(sizeof(char) * nbch + 1)))
+	nbch = check_nbch(nb, nbch);
+	if (!(res = (char *)malloc(sizeof(char) * (nbch + 1))))
 		return (NULL);
 	if (tmp < 0)
 	{
