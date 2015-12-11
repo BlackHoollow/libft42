@@ -6,7 +6,7 @@
 /*   By: nromptea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/01 21:15:04 by nromptea          #+#    #+#             */
-/*   Updated: 2015/12/01 21:26:18 by nromptea         ###   ########.fr       */
+/*   Updated: 2015/12/11 17:24:58 by nromptea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_lstadd(t_list **alst, t_list *new)
 {
-	if (*alst == NULL)
+	if (alst == NULL)
 		new = *alst;
 	else
 		new->next = (*alst);
