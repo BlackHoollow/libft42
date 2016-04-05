@@ -6,7 +6,7 @@
 /*   By: nromptea <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/25 12:22:47 by nromptea          #+#    #+#             */
-/*   Updated: 2016/01/26 15:26:42 by nromptea         ###   ########.fr       */
+/*   Updated: 2016/04/05 18:27:24 by nromptea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,6 @@ char				*ft_itoa_base(int n, int base);
 
 int					ft_getnbr(char *str);
 int					get_next_line(int const fd, char **line);
+void				ft_putnbrendl(int n);
 
 #endif
